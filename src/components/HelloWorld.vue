@@ -107,12 +107,6 @@
   </html>
 </template>
 
-<script>
-export default {
-  name: "HelloWorld",
-};
-</script>
-
 <style scoped>
 /*--------------------------------------------------Fontes*/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
