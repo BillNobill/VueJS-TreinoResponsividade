@@ -160,15 +160,8 @@ h2 {
     margin-top: 20px;
     margin-left: 0px;
   }
-
-  h1 {
-  font-size: 7vw;
-  line-height: 4vh;
-}
-
-h2 {
-  font-size: 20px;
-  line-height: 0.5vh;
-}
+  #container {
+    width: 92%;
+  }
 }
 </style>
