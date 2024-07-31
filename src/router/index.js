@@ -1,12 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-import PaginaInicial from "..//components/PaginaInicial.vue";
-import TabelaVendas from "../components/TabelaVendas.vue";
-import ImagensIniciais from "../components/ImagensInciais.vue";
 
 const routes = [
-  { path: "/", component: PaginaInicial },
-  { path: "/vendas", component: TabelaVendas },
-  { path: "/imagens", component: ImagensIniciais },
+  { path: "/", name: "app", component: () => import(/* webpackChunckName: "app" */ "@/App.vue") },
+  { path: "/paginainicial", name: "paginainicial", component: () => import(/* webpackChunckName: "paginainicial" */ "..//components/PaginaInicial.vue") },
+  { path: "/vendas", name: "vendas", component: () => import(/* webpackChunckName: "vendas" */ "../components/TabelaVendas.vue") },
+  { path: "/imagens", name: "imagens", component: () => import(/* webpackChunckName: "imagens" */ "../components/ImagensInciais.vue") },
 ];
 
 const router = createRouter({
