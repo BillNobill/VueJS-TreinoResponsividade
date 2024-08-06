@@ -1,32 +1,30 @@
 <template>
-  <main>
-    <div id="app">
-      <header>
-        <nav>
-          <div>
-            <img
-              :src="require('@/assets/img/Porsche-Logo.png')"
-              alt="Porsche Logo"
-              style="width: 30px"
-            />
-          </div>
-          <button @click="toggleMenu" class="hamburger-button">
-            <span class="hamburger-icon"></span>
-            <span class="hamburger-icon"></span>
-            <span class="hamburger-icon"></span>
-          </button>
-          <ul v-if="isMenuOpen" class="dropdown-menu">
-            <li><RouterLink to="/">Início</RouterLink></li>
-            <li><RouterLink to="/vendas">Tabela Vendas</RouterLink></li>
-            <li><RouterLink to="/imagens">Imagens Iniciais</RouterLink></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <RouterView />
-      </main>
-    </div>
-  </main>
+  <div id="app">
+    <header>
+      <nav>
+        <div>
+          <img
+            :src="require('@/assets/img/Porsche-Logo.png')"
+            alt="Porsche Logo"
+            style="width: 30px"
+          />
+        </div>
+        <button @click="toggleMenu" class="hamburger-button">
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+        </button>
+        <ul v-if="isMenuOpen" class="dropdown-menu">
+          <li><RouterLink to="/">Início</RouterLink></li>
+          <li><RouterLink to="/vendas">Tabela Vendas</RouterLink></li>
+          <li><RouterLink to="/imagens">Imagens Iniciais</RouterLink></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <RouterView />
+    </main>
+  </div>
 </template>
 
 <script>
